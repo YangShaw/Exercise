@@ -31,7 +31,7 @@ public class Two_Three_One {
 		n=s.nextInt();
 		pac=new Pac[n];
 		dp=new int[n][n];
-		//ddd
+		
 		for(int i=0;i<n;i++){
 			pac[i]=new Pac(s.nextInt(),s.nextInt());
 		}

@@ -1,15 +1,14 @@
 /**************************
  *                        *
  * Young Shaw             *
- * 2017年8月5日                	  *
+ * 2017年8月6日                	  *
  *                        *
  **************************/
 package BaiDu;
 
 import java.util.Scanner;
 
-public class C {
-	
+public class Main {
 	public static int a[];
 	public static int b[];
 	public static int k[];
@@ -25,16 +24,12 @@ public class C {
 			for(int i=0;i<k.length;i++){
 				if(p[i]>defense){
 					value=(health/(p[i]-defense))*k[i];
-					System.out.println("第一步："+value);
 					int reminder=health%(p[i]-defense);
-					System.out.println("余数为"+reminder);
 					if(reminder!=0){
 						value=value+compute2(reminder,defense);
-						System.out.println("第二步："+value);
 					}
 					if(value<min){
 						min=value;
-						System.out.println(min);
 					}
 				}
 				
@@ -43,7 +38,6 @@ public class C {
 			if(min==INF){
 				return -1;
 			} else {
-				System.out.println(min);
 				record[health][defense]=min;
 			}
 		}
@@ -58,13 +52,10 @@ public class C {
 			if(p[i]>defense){
 				value=(reminder/(p[i]-defense))*k[i];
 				int reminder2=reminder%(p[i]-defense);
-				System.out.println("第二次余数为"+reminder2);
 				if(reminder2!=0){
 					value=value+k[i];
 				}
-				System.out.println(value);
 				if(value<min){
-					System.out.println("zuixiaozhi"+min);
 					min=value;
 				}
 			}
